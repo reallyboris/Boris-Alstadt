@@ -1,0 +1,56 @@
+political_decisions = {
+
+	financial_hub = {
+		picture = "financial_hub"
+		potential = {
+			NOT = { capital_scope = { trade_goods = precious_metal } }
+			OR = { government = bourgeois_dictatorship government = prussian_constitutionalism government = hms_government government = democracy }
+		}
+
+		allow = {
+			war = no
+			election = no
+			investment_banks = 1
+			has_recently_lost_war = no
+			
+			money = 8000000
+			
+			#High development
+			literacy = 0.70
+			
+			#Capital is nice
+			capital_scope = { 
+				total_pops = 100000 
+				
+			}
+			
+			#Stable nation
+			NOT = { average_militancy = 2 }
+			
+			#Favourable corporate policies
+			#has_country_modifier = central_bank_established
+			OR = { 
+				economic_policy = laissez_faire 
+				economic_policy = interventionism 
+			}
+		}
+
+		effect = {
+			prestige = 20
+			random_owned = { limit = { is_capital = yes } trade_goods = precious_metal }
+			money = -999999
+			money = -999999
+			money = -999999
+			money = -999999
+			money = -999999
+			money = -999999
+			money = -999999
+			money = -999999
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_greater_power = no is_secondary_power = no }
+		}
+	}
+
+}
