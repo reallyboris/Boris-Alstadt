@@ -1,0 +1,142 @@
+political_decisions = {
+	global_setup = {
+		potential = {
+			tag = UTI
+			NOT = { has_global_flag = setup_done }
+		}
+		allow = {
+
+		}
+		effect = {
+			enable_canal = 4
+			enable_canal = 5
+			enable_canal = 6
+			enable_canal = 7
+			enable_canal = 8
+			enable_canal = 9
+			enable_canal = 10
+			enable_canal = 11
+			enable_canal = 12
+			enable_canal = 13
+			enable_canal = 14
+			enable_canal = 15
+			enable_canal = 16
+			enable_canal = 17
+			enable_canal = 18
+			enable_canal = 19
+			enable_canal = 20
+			set_variable = {
+				which = money_millions
+				value = 0
+			}
+			set_global_flag = setup_done
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	money_pops_setup = {
+		potential = {
+			tag = UTI
+			NOT = { has_global_flag = money_setup_done }
+		}
+		allow = {
+
+		}
+		effect = {
+			TUR = {
+				add_accepted_culture = mashriqi
+				add_accepted_culture = bosniak
+			}
+			AUS = {
+				add_accepted_culture = czech
+			}
+			ENG = { treasury = 500000 }
+			RUS = { treasury = 500000 }
+			FRA = { treasury = 500000 }
+			PRU = { treasury = 500000 }
+			AUS = { treasury = 500000 }
+			TUR = { treasury = 300000 }
+			SPA = { treasury = 250000 }
+			USA = { treasury = 400000 }
+			SAR = { treasury = 120000 }
+			NET = { treasury = 120000 }
+			BEL = { treasury = 120000 }
+		
+			any_country = {
+				limit = {
+					exists = yes
+					is_secondary_power = yes
+					NOT = {
+						tag = BEL
+						tag = NET
+						tag = SAR
+					}
+				}
+				treasury = 60000
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					is_secondary_power = no
+					is_greater_power = no
+				}
+				treasury = 20000
+			}
+			any_country = { limit = { is_greater_power = yes } capitalists = { money = 1000 } aristocrats = { money = 500 } artisans = { money = 200 } }
+			any_country = { limit = { is_secondary_power = yes } capitalists = { money = 800 } aristocrats = { money = 400 } artisans = { money = 100 } }
+			any_country = {
+				limit = { is_greater_power = no is_secondary_power = no civilized = yes }
+				capitalists = { money = 500 } aristocrats = { money = 200 } artisans = { money = 50 } 
+			}
+			country_event = 1000090
+			country_event = 1000094
+			set_global_flag = CLN_can_be_annexed
+			set_global_flag = money_setup_done
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	cln_die = {  # 1st time day1
+		potential = {
+			tag = CLN
+			has_global_flag = CLN_can_be_annexed
+		}
+		allow = {
+
+		}
+		effect = {
+			clr_global_flag = CLN_can_be_annexed
+			UTI = {
+				country_event = {
+					id = 1000092
+					days = 14235  # happens in 1875
+				}
+			}
+			FROM = { inherit = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	cln_die_2 = {  #2nd time 1 month after 1875
+		potential = {
+			tag = CLN
+			has_global_flag = CLN_can_be_annexed_2
+		}
+		allow = {
+
+		}
+		effect = {
+			clr_global_flag = CLN_can_be_annexed_2
+			FROM = { inherit = THIS }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+

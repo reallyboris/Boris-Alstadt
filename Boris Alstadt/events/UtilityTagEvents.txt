@@ -1,0 +1,386 @@
+country_event = {
+		id = 1000090
+		title = "AI Check every approx. 1 months"
+		desc = "Checking..."
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = "apply"
+			# apply strait and canal crossing icons
+			any_country = {
+				limit = {
+					exists = yes 
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 860
+							province_id = 859
+							province_id = 372
+							province_id = 517
+							province_id = 512
+							province_id = 1687
+							province_id = 865
+							province_id = 861
+							province_id = 373
+						}
+					}
+					add_province_modifier = {
+						name = canal_notification
+						duration = -1
+					}
+							
+				}
+			}
+			any_country = {
+				limit = {
+					exists = yes 
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 334
+							province_id = 372
+							province_id = 373
+							province_id = 371
+							province_id = 2557
+							province_id = 859
+							province_id = 865
+							province_id = 860
+							province_id = 861
+							province_id = 759
+							province_id = 763
+							province_id = 1687
+							province_id = 517
+							province_id = 1403
+							province_id = 1413
+							province_id = 1420
+							province_id = 1438
+							province_id = 1442
+							province_id = 1440
+							province_id = 1457
+							province_id = 1640
+							province_id = 1660
+							province_id = 1664
+							province_id = 1666
+							province_id = 1667
+							province_id = 1659
+							province_id = 1455
+							province_id = 1458
+							province_id = 1461
+							province_id = 2565
+							province_id = 1463
+							province_id = 1460
+						}
+					}
+					add_province_modifier = {
+						name = land_crossing_notification
+						duration = -1
+					}
+							
+				}
+			}
+			any_country = {
+				limit = {
+					exists = yes 
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 13
+							province_id = 14
+							province_id = 78
+							province_id = 62
+							province_id = 75
+							province_id = 68
+							province_id = 70
+							province_id = 2237
+							province_id = 2269
+							province_id = 2334
+							province_id = 2335
+							province_id = 2036
+							province_id = 2048
+							province_id = 2123
+							province_id = 2124
+							province_id = 254
+							province_id = 271
+							province_id = 324
+							province_id = 335
+							province_id = 374
+							province_id = 348
+							province_id = 345
+							province_id = 353
+							province_id = 349
+							province_id = 358
+							province_id = 375
+							province_id = 385
+							province_id = 418
+							province_id = 419
+							province_id = 473
+							province_id = 766
+							province_id = 826
+							province_id = 853
+							province_id = 838
+							province_id = 845
+							province_id = 843
+							province_id = 869
+							province_id = 837
+							province_id = 827
+							province_id = 966
+							province_id = 1049
+							province_id = 301
+							province_id = 400
+							province_id = 1083
+							province_id = 1086
+							province_id = 1084
+							province_id = 1162
+							province_id = 1165
+							province_id = 1168
+							province_id = 1145
+							province_id = 1309
+							province_id = 1310
+							province_id = 1322
+							province_id = 1402
+							province_id = 1384
+							province_id = 1385
+							province_id = 1418
+							province_id = 1421
+							province_id = 1495
+							province_id = 1499
+							province_id = 1642
+							province_id = 1672
+							province_id = 1458
+							province_id = 1459
+							province_id = 1462
+							province_id = 1464
+							province_id = 2512
+							province_id = 2516
+							province_id = 2537
+							province_id = 1531
+							province_id = 1412
+							province_id = 1875
+						}
+					}
+					add_province_modifier = {
+						name = sea_crossing_notification
+						duration = -1
+					}
+							
+				}
+			}
+			#apply kiel canal province icon if it's built
+			any_country = {
+				limit = {
+					exists = yes
+					is_canal_enabled = 1
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 369
+						}
+					}
+					add_province_modifier = {
+						name = canal_notification
+						duration = -1
+					}
+							
+				}
+			}
+			#apply suez canal province icon if it's built
+			any_country = {
+				limit = {
+					exists = yes
+					is_canal_enabled = 2
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1755
+						}
+					}
+					add_province_modifier = {
+						name = canal_notification
+						duration = -1
+					}
+							
+				}
+			}
+			#apply panama canal province icon if it's built
+			any_country = {
+				limit = {
+					exists = yes
+					is_canal_enabled = 3
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1723
+						}
+					}
+					add_province_modifier = {
+						name = canal_notification
+						duration = -1
+					}
+							
+				}
+			}
+			#low relations with UTI
+			any_country = {
+				limit = {
+					exists = yes
+				}
+				relation = { who = THIS value = -400 }
+			}
+			# if crisis is disabled
+			any_country = {
+				limit = {
+					exists = yes
+					has_global_flag = crisis_disabled	
+				}
+				any_state = { flashpoint_tension = -100 }
+			}
+			#cleanup bugged slave states
+			any_country = {
+				limit = {
+					any_state = { is_slave = yes }
+					slavery = no_slavery
+				}
+				any_state = {
+					limit = {
+						is_slave = yes
+					}
+					is_slave = no
+				}
+			}
+			#remove all sphere/influence
+			any_greater_power = {
+				diplomatic_influence = { who = THIS value = -400 }
+			}
+			#cleanup vassals with nonexistant overlords
+			any_country = {
+				limit = {
+					is_vassal = yes
+					exists = yes
+					overlord = { exists = no }
+				}
+			country_event = 1000091
+			}
+			#monthly substate payment
+			#substate payment
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						is_substate = yes
+						AND = {
+							is_vassal = yes
+							is_substate = no
+							total_pops = 250000
+						}
+					}
+					NOT = { has_country_flag = exempt_from_vassal_contribution }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							money = 100000
+						}
+					}
+					owner = {
+						treasury = -100000
+						overlord = { treasury = 100000 }
+					}
+				}
+			}
+			# stop vassal payments
+			any_country = {
+				limit = {
+					exists = yes
+					is_vassal = yes
+					overlord = { has_country_flag = vassals_dont_need_to_pay }
+				}
+				set_country_flag = exempt_from_vassal_contribution
+			}
+			#ghost units cleanup
+			any_country = {
+				limit = {
+					exists = no
+					is_greater_power = no
+					OR = {
+						is_mobilised = yes
+						total_amount_of_ships = 1
+					}
+				}
+			annex_to = FROM
+			}
+			UTI = { country_event = { id = 1000090 days = 30 } }
+		}
+	}
+country_event = {
+	id = 1000091
+	title = "Freedom!"
+	desc = "We have acquired independence!"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		overlord = { release_vassal = THIS }
+	}
+	
+	option = {
+		name = "Nice."
+	}
+}
+country_event = {
+	id = 1000092
+	title = "Releasing CLN"
+	desc = "Releasing CLN"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		MET_1 = {
+			limit = {
+				empty = yes
+			}
+			add_core = CLN
+			release = CLN
+			remove_core = CLN
+		}
+		any_country = {  # makes sure every country has mil access from it to not screw up wars in uncolonized, and reduces relations to prevent alliances
+			limit = {
+				exists = yes
+			}
+			military_access = CLN
+			relation = {
+				who = CLN
+				value = -400
+			}
+		}
+		country_event = {
+			id = 1000093
+			days = 30  # happens after a month
+		}
+	}
+	
+	option = {
+		name = "Nice."
+	}
+}
+country_event = {
+	id = 1000093
+	title = "Setting flag to kill CLN"
+	desc = "Setting flag to kill CLN"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = CLN_can_be_annexed_2
+	}
+	
+	option = {
+		name = "Nice."
+	}
+}

@@ -1,0 +1,9 @@
+owner = TIA
+controller = TIA
+add_core = CHI
+add_core = TIA
+trade_goods = silk
+life_rating = 32
+1861.1.1 = {
+	fort = 1
+}

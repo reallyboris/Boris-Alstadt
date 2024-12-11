@@ -1,0 +1,6 @@
+trade_goods = grain
+life_rating = 35
+owner = HUA
+controller = HUA
+add_core = CHI
+add_core = HUA

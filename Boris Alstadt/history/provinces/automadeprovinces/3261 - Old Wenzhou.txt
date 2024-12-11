@@ -1,0 +1,6 @@
+trade_goods = grain
+life_rating = 35
+owner = WEN
+controller = WEN
+add_core = CHI
+add_core = WEN

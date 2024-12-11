@@ -1,0 +1,9 @@
+trade_goods = opium
+life_rating = 25
+owner = CLN
+controller = CLN
+1861.1.1 = {
+	owner = RUS
+	controller = RUS
+	colonial = 2
+}

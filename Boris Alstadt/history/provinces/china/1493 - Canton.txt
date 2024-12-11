@@ -1,0 +1,11 @@
+add_core = CHI
+add_core = GXI
+add_core = MAC
+trade_goods = coal
+life_rating = 32
+owner = MAC
+controller = MAC
+fort = 1
+1861.1.1 = { 
+	naval_base = 1 
+}

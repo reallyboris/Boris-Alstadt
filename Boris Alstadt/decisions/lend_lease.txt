@@ -1,0 +1,18 @@
+political_decisions = {
+
+request_lend_lease = {
+		picture = lend_lease
+		alert = no
+		potential = {
+			year = 1870
+			ai = no
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			country_event = 50000
+		}
+	}
+}

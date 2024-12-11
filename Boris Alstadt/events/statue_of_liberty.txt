@@ -1,0 +1,90 @@
+country_event = {
+	title = "The Statue of Liberty"
+	desc = "Whom shall be the lucky receiver of the State of Liberty?"
+
+	id = 110000
+	is_triggered_only = yes
+	allow_multiple_instances = no
+	
+	option = {
+		name = "Let's not decide yet"
+	}
+	option = {
+		name = "USA! @USA"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = USA
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+	option = {
+		name = "Mexico! @MEX"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = MEX
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+	option = {
+		name = "Gran Columbia! @GCO"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = GCO
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+	option = {
+		name = "South Andean Confederation! @SAC"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = SAC
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+	option = {
+		name = "Brazil! @BRZ"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = BRZ
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+	option = {
+		name = "Argentina! @ARG"
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = statue_of_liberty_has_been_built }
+				exists = yes
+				tag = ARG
+				ai = no
+			}
+			THIS = { set_global_flag = statue_of_liberty_has_been_built }
+			country_event = 19300
+		}
+	}
+}

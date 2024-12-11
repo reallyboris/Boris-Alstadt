@@ -1,0 +1,7 @@
+owner = NIN
+controller = NIN
+add_core = CHI
+add_core = NIN
+add_core = GXI
+trade_goods = iron
+life_rating = 32

@@ -1,0 +1,6 @@
+trade_goods = grain
+life_rating = 35
+owner = FUZ
+controller = FUZ
+add_core = CHI
+add_core = FUZ

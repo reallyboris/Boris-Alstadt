@@ -1,0 +1,7 @@
+owner = CHL
+controller = CHL
+add_core = CHL
+add_core = SAC
+trade_goods = iron
+life_rating = 35
+1861.1.1 = { railroad = 1 }

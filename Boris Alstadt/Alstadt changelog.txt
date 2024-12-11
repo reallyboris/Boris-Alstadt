@@ -1,0 +1,192 @@
+1.8.x changes:
+
+
+Implemented host decisions that allow the host to siege/unsiege themselves intead of it being limited to other countries
+
+
+
+
+
+1.8.1 changes:
+
+- Made fabric not require dyes, the dyes are needed to produce the clothes instead (clippers no longer requires dye basically)
+
+- gave more unciv reforms techs, and ensured you keep the techs after westernization (rehost at some point to be sure)
+
+- Infamy decay diffrence between war and peace is less extreme
+
+- paper/furnichure requires lumber instead of timer
+
+- cement factories no longer requires iron as a maintenace good, it requires extra machine parts instead
+
+- fixed the puppet tech bonus being too OP
+
+- Reduced amount of infamy from trucebreaking on core CBs
+
+
+
+
+
+TODOs/maybes for future versions:
+
+- TODO: re-consolidate dye decisions
+
+  goods.txt causes ooses? (reno)
+ 
+- TODO: port of medan does not let ships dock there
+
+- TODO: option for transfers that cost infamy
+
+- TODO: buffs/penalties for funding/not funding admin?
+
+- TODO: make uncivs that start with certain reforms also start with the techs that corrospond with said reforms
+
+- TODO: add decision to go republic from constitional monarchy
+
+- TODO: make treaty port nations unsphereable unless someone owns it
+
+- TODO: add clipper factories in more places (France etc)
+
+- TODO: maybe lower amount of fabric requires for clippers
+
+- TODO: mechanics to allow 2 italy players?
+
+- TODO: make the puppetted nation remove all alliances if they are puppeted?
+
+
+- TODO: remove russian core on åland islands
+
+- bigger stockpiles?
+
+- reduce america rgo size bonus
+
+- BUGFIX: oklahoma gold rush is infinite
+
+- TODO: buff cruisers so they are close to being as good as battleships
+
+- TODO: "disable crisis" not working?
+
+- TODO: more starting factories n industry?
+
+- TODO: "colonial migration" specific NF?
+
+- TODO: nerf equality?
+
+- TODO: increase the soldier penalty for colonies in defines
+
+- todo: make treaty port nations unable to loan money (loan_amount = -1), and refund all ai nations when they get a disease effect that costs moneys
+
+- TODO: more day1 art factories/better industry day1 in general?
+
+- TODO: more migration to countries with more states? (prevent smaller countries from getting equal migration to big ones)
+
+- TODO: add prussia to the list of countries that will always gutter crown even if not GP
+
+- TODO: 5% for the rest of the inventions (naval for example)
+
+- TODO: more money generation?
+
+- TODO: increase money hoarder maybe?
+
+- TODO: re-check if migration balance is ok
+
+- TODO: add basic chem to all civ'd nations
+
+- TODO: maybe increase the factory drawdown(and up)
+
+- TODO: beihai port is wrong direction
+
+- todo: no high liberal % at start in aussie upper house?
+
+- TODO: uk starts with all mutually exclusive market structure inventions?
+
+- WIP: add more pops to underpopulated areas compared to irl, morocco and korea too? (DONE morocco, algeria and most of africa)
+
+- TODO: move radio to another tech?
+
+- TODO: make naval ai only use 1 stack? (mati idea)
+
+- TODO: a rubber rgo overwrites a iron one in madingou
+
+- TODO: increase mine size from metallurgy techs more
+
+- TODO: nerf dreadnoughts
+
+- TODO: puppet grant system?
+
+- TODO: consider making frigates require lvl 1 ports to build
+
+- TODO: buff tanks n planes more?
+
+- TODO: decision for player to dec independence if they are a puppet and in a ai war with overlord
+
+- TODO: add a small bit of W.E if you lose to ideology rebels
+
+- TODO: import some more inventions from igor, which increases RGO effiency overall?
+
+- TODO: buff LF more?
+
+- TODO: add zombies? with the host decisions?
+
+- TODO: Capitalists promotion/demotion with communists (when paychecks are 1)
+
+- TODO: reduce warscore in GWs
+
+- TODO: bigger penalty to migration to provs with unemployment?
+
+- TODO: coal province in sardengia, sulphur in spain?
+
+- TODO: reduce fuel cost for cruisers? (too much)
+
+- TODO: finsh currency regulation
+
+- TODO: nerf torpedo boats invention (Commerce raider)
+
+- TODO: add carriers?
+
+- TODO: spread out RGOs more?
+
+- TODO: move mob button to a better place (so it aint accidentially pressed)
+
+- TODO: patriots not releasing stuff unless it borders them?
+
+- TODO: iron/coal early game? (iron unemployment while steel factories are bottlenecked, coal?)
+
+- TODO: increase puppet influence bonus?
+
+- TODO: more colonial power (UK day1)
+
+- TODO: transfer costs infamy?
+
+- TODO: more troop speed with railraods?
+
+- TODO: increase cruiser build time?
+
+- TODO: increase colony soldier brig multiplier?
+
+- TODO: make germany pan-nats always go to prussia no matter if its gp or not
+
+- TODO: Increase duration of oil province gold rushes
+
+- TODO: reduce building time? of all buildings
+
+- TODO: Dyes abolished in nancy = iron prov?
+
+- TODO: nerf early art sup abit?
+
+- TODO: increase external migration abit?
+
+- TODO: non intrusive revanchism? (more soldier promotion)
+
+- TODO: guarrentie the UK will inherit the indian minors with the coal/iron before 1870
+
+- TODO: nerf irregulars n cav in techs/invention
+
+- TODO: add a way for russia to get cores on outer manchuria if they dont sphere manchuria and take the decision
+
+- TODO: buff the gas cost?
+
+- todo: "mob slider" mechanic? (and increasing mob into the 1900s)
+
+- todo: swap nvs?
+

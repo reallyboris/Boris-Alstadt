@@ -1,0 +1,7 @@
+owner = WEN
+controller = WEN
+add_core = CHI
+add_core = WEN
+add_core = GXI
+trade_goods = tea
+life_rating = 32

@@ -1,0 +1,653 @@
+#Treaty Ports
+province_event = {
+	id = 90954
+	title = "EVTNAME90954"
+	desc = "EVTDESC90954"
+		
+	trigger = {
+		OR = {
+			province_id = 3263
+			province_id = 1498
+			province_id = 1496
+			province_id = 3262
+			province_id = 3261
+			province_id = 3260
+			province_id = 1569
+			province_id = 1538
+			province_id = 3264
+			province_id = 1566
+			province_id = 3259
+			province_id = 3258
+	 
+		}
+		NOT = { has_province_modifier = treaty_port }
+		owner = {
+			NOT = { primary_culture = beifaren }
+			NOT = { primary_culture = nanfaren }
+			NOT = { primary_culture = manchu }
+			NOT = { primary_culture = hakka }
+			NOT = { primary_culture = miao }
+			NOT = { primary_culture = min }
+			NOT = { primary_culture = zhuang }
+			NOT = { primary_culture = yi }
+			NOT = { primary_culture = yue }
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA90954"
+		trade_goods = precious_metal
+		any_pop = { reduce_pop = 1.2 }
+		add_province_modifier = { name = treaty_port duration = -1 }
+	}
+}
+
+country_event = { 
+	id = 90955
+	title = "The Beihai Treaty Port"
+	desc = "Our influence in Beihai has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = BEI }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = BEI } }
+			}
+		}
+		owns = 3263
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = BEI
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = BEI
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = {
+	id = 90957
+	title = "We have been put into $FROMCOUNTRY$'s market due to them owning a treaty port"
+	desc = "We have been put into $FROMCOUNTRY$'s market due to them owning a treaty port"
+		
+	is_triggered_only = yes
+	
+	immediate = {
+		civilized = yes
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = -600
+			}
+		}
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = 600
+			}
+		}
+	}
+
+	option = {
+		name = "Well..."
+	}
+}
+country_event = {
+	id = 90958
+	title = "We have been put into $FROMCOUNTRY$'s spherelord's market due to them owning a treaty port"
+	desc = "We have been put into $FROMCOUNTRY$'s spherelord's market due to them owning a treaty port"
+		
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		civilized = yes
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = -600
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			sphere_owner = {
+				diplomatic_influence = {
+					who = THIS
+					value = 600
+				}
+				
+			}
+		}
+		
+	}
+
+	option = {
+		name = "Well..."
+	}
+}
+
+
+country_event = { 
+	id = 90956
+	title = "The Macao Treaty Port"
+	desc = "Our influence in Macao has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = MAC }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = MAC } }
+			}
+		}
+		owns = 1498
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = MAC
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = MAC
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90959
+	title = "The Hong Kong Treaty Port"
+	desc = "Our influence in Hong Kong has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = HOG }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = HOG } }
+			}
+		}
+		owns = 1496
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = HOG
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = HOG
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90960
+	title = "The Fuzhou Treaty Port"
+	desc = "Our influence in Fuzhou has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = FUZ }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = FUZ } }
+			}
+		}
+		owns = 3262
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = FUZ
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = FUZ
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90961
+	title = "The Wenzhou Treaty Port"
+	desc = "Our influence in Wenzhou has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = WEN }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = WEN } }
+			}
+		}
+		owns = 3261
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = WEN
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = WEN
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90962
+	title = "The Ningbo Treaty Port"
+	desc = "Our influence in Ningbo has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = NIN }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = NIN } }
+			}
+		}
+		owns = 3260
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = NIN
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = NIN
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90963
+	title = "The Hangzhou Treaty Port"
+	desc = "Our influence in Hangzhou has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = HAG }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = HAG } }
+			}
+		}
+		owns = 1569
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = HAG
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = HAG
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90964
+	title = "The Shanghai Treaty Port"
+	desc = "Our influence in Shanghai has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = SHA }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = SHA } }
+			}
+		}
+		owns = 1538
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = SHA
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = SHA
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90965
+	title = "The Huaian Treaty Port"
+	desc = "Our influence in Huaian has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = HUA }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = HUA } }
+			}
+		}
+		owns = 3264
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = HUA
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = HUA
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90966
+	title = "The Qingdao Treaty Port"
+	desc = "Our influence in Qingdao has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = QNG }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = QNG } }
+			}
+		}
+		owns = 1566
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = QNG
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = QNG
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90967
+	title = "The Tianjin Treaty Port"
+	desc = "Our influence in Tianjin has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = TIA }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = TIA } }
+			}
+		}
+		owns = 3259
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = TIA
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = TIA
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+country_event = { 
+	id = 90968
+	title = "The Qinhuangdao Treaty Port"
+	desc = "Our influence in Qinhuangdao has allowed us to gain further economic control over the area!"
+	allow_multiple_instances = no
+	
+	trigger = {
+		OR = {
+			AND = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = QIN }
+			}
+			AND = {
+				is_greater_power = no
+				part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = QIN } }
+			}
+		}
+		owns = 3258
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Perfect"
+		random_country = {
+			limit = {
+				tag = QIN
+				THIS = { is_greater_power = yes }
+			}
+			country_event = 90957
+		}
+		random_country = {
+			limit = {
+				tag = QIN
+				THIS = {
+					is_greater_power = no
+					part_of_sphere = yes
+				}
+			}
+			country_event = 90958
+		}
+	}
+}
+
+
+
+

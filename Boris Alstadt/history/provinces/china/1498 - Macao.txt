@@ -1,0 +1,6 @@
+owner = POR
+controller = POR
+add_core = POR
+add_core = MAC
+trade_goods = tea
+life_rating = 32

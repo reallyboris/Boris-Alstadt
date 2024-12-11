@@ -1,0 +1,13 @@
+owner = HAG
+controller = HAG
+add_core = CHI
+add_core = TPG
+add_core = GXI
+add_core = HAG
+trade_goods = silk
+life_rating = 32
+1861.1.1 = {
+	controller = TPG
+	owner = TPG
+	
+}

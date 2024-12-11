@@ -1,0 +1,7 @@
+owner = HAG
+controller = HAG
+add_core = CHI
+add_core = GXI
+add_core = HAG
+trade_goods = silk
+life_rating = 32
