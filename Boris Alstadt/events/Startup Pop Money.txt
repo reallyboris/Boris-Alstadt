@@ -1,0 +1,20 @@
+#Startup capital - CHINA
+country_event = {
+	id = 887
+	title = "Financial Aid from the Communist Internationale"
+	desc = "The Internationale has raised some money for our cause."
+	picture = "GOLDCOMM"
+	
+	
+	trigger = {
+		year = 1836
+		NOT = { has_country_flag = moneyforall }
+		tag = CHI
+	}
+	
+	option = {
+		name = "We thank our Communist Brothers!"
+		any_pop = { money = 1 }
+		set_country_flag = moneyforall
+				}
+}
